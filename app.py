@@ -10,7 +10,7 @@ CORS(app)
 def home():
     response = {
         "email": "aminuibrahimthefifth@gmail.com",
-        "current_datetime": datetime.utcnow().isoformat() + "Z",
+        "current_datetime": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
         "github_url": "https://github.com/Prince-ij/hng12-stage0"
     }
     return jsonify(response), 200
